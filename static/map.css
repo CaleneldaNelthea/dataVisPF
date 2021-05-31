@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #BFC0C0;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+span {
+    border: 2px solid #4F5D75;
+    padding: 10px;
+}
+
+a {
+    color: #BFC0C0;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+#button-1 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#button-1 a {
+    position: relative;
+    transition: all .45s ease-Out;
+}
+
+#spin {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    left: 70px;
+    top: 20px;
+    transform: rotate(0deg);
+    background: none;
+    position: absolute;
+    transition: all .5s ease-Out;
+}
+
+#button-1:hover #spin {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    left: -70px;
+    top: -70px;
+    background: #BFC0C0;
+    transform: rotate(80deg);
+}
+
+#button-1:hover a {
+    color: #2D3142;
+}
+
+#menu {
+    background: #555555;
+    position: absolute;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+}

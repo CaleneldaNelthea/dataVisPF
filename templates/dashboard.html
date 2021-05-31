@@ -1,0 +1,97 @@
+{% extends "base.html"%}
+{% block heading %}
+<link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/static/dashboardStyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script type="module" src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="module" src="https://code.highcharts.com/modules/data.js"></script>
+    <script type="module" src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="module" src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script type="module" src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script type="module" src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script type="module" src="/static/bandwidthsRegion.js"></script>
+    <script type="module" src="/static/serverNodesLatestBW.js"></script>
+    <script type="module" src="/static/clientNodeOnAverageBW.js"></script>
+{% endblock %}
+{% block content %}
+<div class="content">
+<div class="button" id="button-1">
+    <div id="spin"></div>
+    <a href="/">Back to home</a>
+</div>
+    <h1><span>Ikaros 2.0??</span> {{ location }}</h1>
+</div>
+<div id="charts">
+    <div id="selection">
+    <select id = "selCounty"
+            multiple = "multiple"
+            size = "21">
+        <option value = "Blekinge">Blekinge</option>
+        <option value = "Dalarna">Dalarna</option>
+        <option value = "Gävleborg">Gävleborg</option>
+        <option value = "Gotland">Gotland</option>
+        <option value = "Halland">Halland</option>
+        <option value = "Jämtland">Jämtland</option>
+        <option value = "Jönköping">Jönköping</option>
+        <option value = "Kalmar">Kalmar</option>
+        <option value = "Kronoberg">Kronoberg</option>
+        <option value = "Norrbotten">Norrbotten</option>
+        <option value = "Örebro">Örebro</option>
+        <option value = "Östergötland">Östergötland</option>
+        <option value = "Skåne">Skåne</option>
+        <option value = "Södermanland">Södermanland</option>
+        <option value = "Stockholm">Stockholm</option>
+        <option value = "Uppsala">Uppsala</option>
+        <option value = "Värmland">Värmland</option>
+        <option value = "Västerbotten">Västerbotten</option>
+        <option value = "Västernorrland">Västernorrland</option>
+        <option value = "Västmanland">Västmanland</option>
+        <option value = "Västra Götaland">Västra Götaland</option>
+    </select>
+    <button class="show" type = "button">
+        Show
+    </button>
+    <button class="reset" type = "button">
+        reset
+    </button>
+        <button class="toggleSwedenOnly" id= "toggle" type = "button">
+            Toggle Sweden
+        </button>
+</div>
+    <div class="left-content">
+
+    <figure class="highcharts-figure1">
+    <div id="container3">
+        <!-- add canvas --------------------------------------------------------------------------------------*/ -->
+        <canvas id="chartjs3"></canvas>
+    </div>
+    <p class="highcharts-description" id="container3P">
+        Fill me
+    </p>
+</figure>
+
+</div>
+    <div class="right-content">
+    <figure class="highcharts-figure2">
+        <div id="container"></div>
+        <canvas id="chartjs"></canvas>
+        <p class="highcharts-description" id="containerP">
+            Fill me
+        </p>
+    </figure>
+
+    <figure class="highcharts-figure3">
+        <div id="container2"></div>
+        <p class="highcharts-description" id="container2P">
+            Fill me
+        </p>
+    </figure>
+
+</div>
+</div>
+<script type="text/javascript" src="/static/bandwidthsRegion.js"></script>
+<script type="text/javascript" async src="/static/serverNodesLatestBW.js"></script>
+<script type="module" async src="/static/clientNodeOnAverageBW.js"></script>
+{% endblock %}

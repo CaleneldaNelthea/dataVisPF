@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+/* Dark attribution */
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib a {
+    color: #fff;
+}
+/* Dark popup */
+
+.mapboxgl-popup-content {
+    background-color: #202020;
+    color: #fff;
+}
+
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: #202020;
+}
+
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+    border-bottom-color: #202020;
+}
+
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+    border-left-color: #202020;
+}
+
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+    border-right-color: #202020;
+}
+
+.mapboxgl-ctrl {
+    filter: invert(100%);
+}

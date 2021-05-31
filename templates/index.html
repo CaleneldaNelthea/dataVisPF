@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+{% block heading %}
+<link rel="stylesheet" type="text/css" href="/static/indexCSS.css">
+{% endblock %}
+{% block content %}
+<h1><span>Ikaros 2.0??</span> {{ location }}</h1>
+<div id="container">
+
+    <div class="button" id="button-1">
+        <div id="spin"></div>
+        <a href="http://127.0.0.1:5000/lowestbandwidths">Go to the Lowest Bandwidths Heatmap</a>
+    </div>
+
+    <div class="button" id="button-2">
+        <div id="spin"></div>
+        <a href="http://127.0.0.1:5000/highestbandwidths">Go to the Highest Bandwidths Heatmap</a>
+    </div>
+
+    <div class="button" id="button-3">
+        <div id="spin"></div>
+        <a href="http://127.0.0.1:5000/heatmap">Go to the General Heatmap</a>
+    </div>
+
+    <div class="button" id="button-4">
+        <div id="spin"></div>
+        <a href="http://127.0.0.1:5000/pointsmap">Go to the Pointsmap</a>
+    </div>
+
+    <div class="button" id="button-5">
+        <div id="spin"></div>
+        <a href="#">Let's Go!</a>
+    </div>
+
+    <div class="button" id="button-6">
+        <div id="spin"></div>
+        <a href="#">Let's Go!</a>
+    </div>
+
+    <div class="button" id="button-7">
+        <div id="spin"></div>
+        <a href="http://127.0.0.1:5000/dashboard">Dashboard</a>
+    </div>
+</div>
+    {% endblock %}

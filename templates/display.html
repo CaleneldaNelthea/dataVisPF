@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+{% block heading %}
+<link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/displayDataStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {% endblock %}
+{% block content %}
+<h1><span>Ikaros 2.0??</span> {{ location }}</h1>
+<div id="vertical-buttons">
+    <div class="button" id="button-1">
+        <div id="spin"></div>
+        <a href="/">Back to home</a>
+    </div>
+
+    <div class="button" id="button-2">
+        <div id="spin"></div>
+        <a href="#" id="link">Back</a>
+    </div>
+</div>
+
+<!-- Flex Container -->
+<div class="container">
+
+    <canvas id="dataChart">
+    </canvas>
+</div>
+<!-- Date selector -->
+<div id="divdate">
+    <label for="startdate">Enter a starting date and/or time :</label><br>
+    <input id="startdate" type="datetime-local" name="startdate"><br>
+    <label for="enddate">Enter an ending date and/or time :</label><br>
+    <input id="enddate" type="datetime-local" name="enddate"><br>
+    <button>Show</button>
+</div>
+<h1 id="identifier">test</h1>
+<script type="text/javascript" src="/static/display.js" ></script>
+{% endblock %}
